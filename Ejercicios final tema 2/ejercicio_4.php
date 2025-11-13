@@ -19,7 +19,6 @@ function procesarTextoEpico($texto) {
         'longitud_promedio' => $longitudProm
     ];
 }
-
 $texto = readline("Introduce el texto: ");
 $resultado = procesarTextoEpico($texto);
 
