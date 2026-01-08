@@ -23,21 +23,21 @@ docker compose -f docker-compose.yml down -v
 
 ## 🌐 Accesos
 
-- **Aplicación PHP**: http://localhost:8080
+- **Aplicación PHP**: http://localhost:localhost
 - **phpMyAdmin**: http://localhost:8081
 
 ## 🔑 Credenciales de Base de Datos
 
 ### Acceso Root
-- **Host**: `localhost` (o `db` desde PHP)
-- **Puerto**: `3306`
-- **Usuario**: `root`
-- **Contraseña**: `root`
+- **Host**: `127.0.0.1` (o `db` desde PHP)
+- **Puerto**: `3307`
+- **Usuario**: `estudiante`
+- **Contraseña**: `estudiante123`
 
 ### Acceso Usuario Normal
-- **Usuario**: `alumno`
-- **Contraseña**: `alumno`
-- **Base de datos**: `testdb`
+- **Usuario**: `estudiante`
+- **Contraseña**: `estudiante123`
+- **Base de datos**: `biblioteca`
 
 ## 📁 Estructura
 
@@ -56,10 +56,10 @@ Crea una carpeta `proyecto/` donde colocarás tus archivos PHP:
 ```php
 <?php
 // Conexión a la base de datos
-$host = 'db';  // Nombre del servicio en docker-compose
-$dbname = 'testdb';
-$username = 'alumno';
-$password = 'alumno';
+$host = '127.0.0.1';  // Nombre del servicio en docker-compose
+$dbname = 'biblioteca';
+$username = 'estudiante';
+$password = 'estudiante123';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);

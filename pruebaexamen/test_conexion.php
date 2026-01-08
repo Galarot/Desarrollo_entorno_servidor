@@ -2,9 +2,9 @@
 echo "=== Test de Conexión - Examen DWES ===\n\n";
 
 try {
-    $dsn = 'mysql:host=127.0.0.1;port=3306;dbname=fruteria;';
-    $usuario = 'alumno';
-    $contraseña = 'alumno123';
+    $dsn = 'mysql:host=127.0.0.1;port=3307;dbname=biblioteca;';
+    $usuario = 'estudiante';
+    $contraseña = 'estudiante123';
 
     $pdo = new PDO($dsn, $usuario, $contraseña);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
